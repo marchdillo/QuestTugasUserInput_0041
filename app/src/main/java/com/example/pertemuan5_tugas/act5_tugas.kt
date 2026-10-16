@@ -314,3 +314,46 @@ fun DateField(
     }
 }
 
+@Composable
+fun ExperienceDropdown(
+    value: String,
+    onSelected: (String) -> Unit,
+    modifier: Modifier = Modifier
+) {
+    var expanded by remember { mutableStateOf(false) }
+    val options = stringArrayResource(R.array.experience_options)
+
+    Box(modifier = modifier) {
+        OutlinedTextField(
+            value = value,
+            onValueChange = {},
+            readOnly = true,
+            enabled = false,
+            label = { Text(stringResource(R.string.experience), fontSize = dimensionResource(R.dimen.text_field).value.sp) },
+            trailingIcon = {
+                Icon(
+                    imageVector = Icons.Default.ArrowDropDown,
+                    contentDescription = stringResource(R.string.cd_dropdown)
+                )
+            },
+            singleLine = true,
+            shape = RoundedCornerShape(dimensionResource(R.dimen.field_corner)),
+            colors = fieldColors(),
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable { expanded = true }
+        )
+        DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+            options.forEach { option ->
+                DropdownMenuItem(
+                    text = { Text(option) },
+                    onClick = {
+                        onSelected(option)
+                        expanded = false
+                    }
+                )
+            }
+        }
+    }
+}
+
