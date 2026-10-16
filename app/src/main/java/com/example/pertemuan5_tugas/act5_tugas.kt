@@ -125,6 +125,15 @@ fun Act5Tugas() {
                         fontSize = dimensionResource(R.dimen.text_title).value.sp,
                         fontWeight = FontWeight.Bold
                     )
+                    Spacer(Modifier.height(dimensionResource(R.dimen.spacing_small)))
+                    Text(
+                        text = stringResource(R.string.form_subtitle),
+                        color = colorResource(R.color.text_subtitle),
+                        fontSize = dimensionResource(R.dimen.text_subtitle).value.sp,
+                        textAlign = TextAlign.Center
+                    )
+                    Spacer(Modifier.height(dimensionResource(R.dimen.spacing_large)))
+
 
                 }
             }
