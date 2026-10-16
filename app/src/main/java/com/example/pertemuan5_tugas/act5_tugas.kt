@@ -172,6 +172,13 @@ fun Act5Tugas() {
                     }
                     Spacer(Modifier.height(dimensionResource(R.dimen.spacing_medium)))
 
+                    Text(
+                        text = stringResource(R.string.choose_skill),
+                        color = colorResource(R.color.text_label),
+                        fontSize = dimensionResource(R.dimen.text_label).value.sp,
+                        fontWeight = FontWeight.Bold,
+                        modifier = Modifier.fillMaxWidth()
+                    )
 
                 }
             }
