@@ -104,7 +104,18 @@ fun Act5Tugas() {
                 )
                 .padding(innerPadding),
             contentAlignment = Alignment.TopCenter
-        )
+        ) {
+            Surface(
+                modifier = Modifier.fillMaxSize(),
+                color = colorResource(R.color.white),
+                shape = RoundedCornerShape(
+                    topStart = dimensionResource(R.dimen.form_corner),
+                    topEnd = dimensionResource(R.dimen.form_corner)
+                )
+            ) {
+
+            }
+        }
     }
 }
 
