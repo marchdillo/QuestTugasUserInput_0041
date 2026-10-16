@@ -10,7 +10,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             Pertemuan5_tugasTheme {
-
+                Act5Tugas()
             }
         }
     }
