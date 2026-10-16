@@ -213,7 +213,11 @@ fun Act5Tugas() {
                             disabledContentColor = colorResource(R.color.button_disabled_text)
                         )
                     ) {
-
+                        Text(
+                            text = stringResource(R.string.proceed),
+                            fontSize = dimensionResource(R.dimen.text_button).value.sp,
+                            fontWeight = FontWeight.Bold
+                        )
                     }
                 }
             }
