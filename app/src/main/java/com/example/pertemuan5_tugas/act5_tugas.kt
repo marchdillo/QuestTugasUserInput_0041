@@ -225,3 +225,17 @@ fun Act5Tugas() {
     }
 }
 
+@Composable
+private fun fieldColors() = OutlinedTextFieldDefaults.colors(
+    focusedBorderColor = colorResource(R.color.purple_title),
+    unfocusedBorderColor = colorResource(R.color.field_border),
+    focusedTextColor = colorResource(R.color.field_text),
+    unfocusedTextColor = colorResource(R.color.field_text),
+    focusedLabelColor = colorResource(R.color.purple_title),
+    unfocusedLabelColor = colorResource(R.color.field_text),
+    disabledBorderColor = colorResource(R.color.field_border),
+    disabledTextColor = colorResource(R.color.field_text),
+    disabledLabelColor = colorResource(R.color.field_text),
+    disabledTrailingIconColor = colorResource(R.color.field_text)
+)
+
