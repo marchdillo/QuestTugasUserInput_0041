@@ -183,8 +183,21 @@ fun Act5Tugas() {
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
-
+                        listOf(
+                            stringResource(R.string.skill_android),
+                            stringResource(R.string.skill_uiux),
+                            stringResource(R.string.skill_web)
+                        ).forEach { skill ->
+                            SkillCheckbox(
+                                label = skill,
+                                checked = skill in skills,
+                                onCheckedChange = { isChecked ->
+                                    if (isChecked) skills.add(skill) else skills.remove(skill)
+                                }
+                            )
+                        }
                     }
+                    Spacer(Modifier.height(dimensionResource(R.dimen.spacing_large)))
 
 
                 }
