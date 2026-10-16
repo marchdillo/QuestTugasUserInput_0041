@@ -113,7 +113,14 @@ fun Act5Tugas() {
                     topEnd = dimensionResource(R.dimen.form_corner)
                 )
             ) {
+                Column(
+                    modifier = Modifier
+                        .verticalScroll(rememberScrollState())
+                        .padding(dimensionResource(R.dimen.form_padding)),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
 
+                }
             }
         }
     }
