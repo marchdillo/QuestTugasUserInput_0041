@@ -158,6 +158,21 @@ fun Act5Tugas() {
                     )
                     Spacer(Modifier.height(dimensionResource(R.dimen.spacing_medium)))
 
+                    Row(horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.spacing_small))) {
+                        DateField(
+                            value = birthDate,
+                            onDateSelected = { birthDate = it },
+                            modifier = Modifier.weight(dimensionResource(R.dimen.weight_equal).value)
+                        )
+                        ExperienceDropdown(
+                            value = experience,
+                            onSelected = { experience = it },
+                            modifier = Modifier.weight(dimensionResource(R.dimen.weight_equal).value)
+                        )
+                    }
+                    Spacer(Modifier.height(dimensionResource(R.dimen.spacing_medium)))
+
+
                 }
             }
         }
