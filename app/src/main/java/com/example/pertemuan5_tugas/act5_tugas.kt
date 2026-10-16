@@ -199,7 +199,22 @@ fun Act5Tugas() {
                     }
                     Spacer(Modifier.height(dimensionResource(R.dimen.spacing_large)))
 
+                    Button(
+                        onClick = { Toast.makeText(context, toastMessage, Toast.LENGTH_SHORT).show() },
+                        enabled = isFormValid,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(dimensionResource(R.dimen.button_height)),
+                        shape = RoundedCornerShape(dimensionResource(R.dimen.button_corner)),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = colorResource(R.color.button_enabled),
+                            contentColor = colorResource(R.color.white),
+                            disabledContainerColor = colorResource(R.color.button_disabled),
+                            disabledContentColor = colorResource(R.color.button_disabled_text)
+                        )
+                    ) {
 
+                    }
                 }
             }
         }
