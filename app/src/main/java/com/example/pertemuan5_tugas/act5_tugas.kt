@@ -77,6 +77,12 @@ fun Act5Tugas() {
             email.isNotBlank() && birthDate.isNotBlank() &&
             experience.isNotBlank() && skills.isNotEmpty()
 
+    Scaffold(
+        containerColor = colorResource(R.color.screen_background)
+    ) { innerPadding ->
 
+
+
+    }
 }
 
