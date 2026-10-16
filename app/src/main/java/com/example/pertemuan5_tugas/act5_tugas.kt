@@ -119,6 +119,12 @@ fun Act5Tugas() {
                         .padding(dimensionResource(R.dimen.form_padding)),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
+                    Text(
+                        text = stringResource(R.string.form_title),
+                        color = colorResource(R.color.purple_title),
+                        fontSize = dimensionResource(R.dimen.text_title).value.sp,
+                        fontWeight = FontWeight.Bold
+                    )
 
                 }
             }
