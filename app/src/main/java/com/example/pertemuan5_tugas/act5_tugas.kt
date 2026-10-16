@@ -64,6 +64,9 @@ import java.util.TimeZone
 @Composable
 fun Act5Tugas() {
     val context = LocalContext.current
+    val toastMessage = stringResource(R.string.toast_proceed)
+
+
 
 }
 
