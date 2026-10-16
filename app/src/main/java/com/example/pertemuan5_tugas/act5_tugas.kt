@@ -73,5 +73,10 @@ fun Act5Tugas() {
     var experience by remember { mutableStateOf("") }
     val skills = remember { mutableStateListOf<String>() }
 
+    val isFormValid = firstName.isNotBlank() && lastName.isNotBlank() &&
+            email.isNotBlank() && birthDate.isNotBlank() &&
+            experience.isNotBlank() && skills.isNotEmpty()
+
+
 }
 
