@@ -264,6 +264,11 @@ fun DateField(
     onDateSelected: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
+    var showDialog by remember { mutableStateOf(false) }
+    val datePickerState = rememberDatePickerState()
+    val pattern = stringResource(R.string.date_format)
+    val timeZoneId = stringResource(R.string.timezone_utc)
+
 
 
 
