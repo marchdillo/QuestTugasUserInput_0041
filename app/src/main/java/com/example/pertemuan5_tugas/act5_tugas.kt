@@ -292,6 +292,25 @@ fun DateField(
         )
     }
 
-
+    if (showDialog) {
+        DatePickerDialog(
+            onDismissRequest = { showDialog = false },
+            confirmButton = {
+                TextButton(onClick = {
+                    datePickerState.selectedDateMillis?.let { millis ->
+                        val formatter = SimpleDateFormat(pattern, Locale.getDefault())
+                        formatter.timeZone = TimeZone.getTimeZone(timeZoneId)
+                        onDateSelected(formatter.format(Date(millis)))
+                    }
+                    showDialog = false
+                }) { Text(stringResource(R.string.ok)) }
+            },
+            dismissButton = {
+                TextButton(onClick = { showDialog = false }) { Text(stringResource(R.string.cancel)) }
+            }
+        ) {
+            DatePicker(state = datePickerState)
+        }
+    }
 }
 
