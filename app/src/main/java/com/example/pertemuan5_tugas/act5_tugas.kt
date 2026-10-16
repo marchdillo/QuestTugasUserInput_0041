@@ -269,7 +269,28 @@ fun DateField(
     val pattern = stringResource(R.string.date_format)
     val timeZoneId = stringResource(R.string.timezone_utc)
 
-
+    Box(modifier = modifier) {
+        OutlinedTextField(
+            value = value,
+            onValueChange = {},
+            readOnly = true,
+            enabled = false,
+            label = { Text(stringResource(R.string.birth_date), fontSize = dimensionResource(R.dimen.text_field).value.sp) },
+            trailingIcon = {
+                Icon(
+                    imageVector = Icons.Default.DateRange,
+                    contentDescription = stringResource(R.string.cd_calendar),
+                    modifier = Modifier.size(dimensionResource(R.dimen.icon_size))
+                )
+            },
+            singleLine = true,
+            shape = RoundedCornerShape(dimensionResource(R.dimen.field_corner)),
+            colors = fieldColors(),
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable { showDialog = true }
+        )
+    }
 
 
 }
