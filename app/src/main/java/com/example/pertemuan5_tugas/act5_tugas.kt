@@ -150,6 +150,14 @@ fun Act5Tugas() {
                     }
                     Spacer(Modifier.height(dimensionResource(R.dimen.spacing_medium)))
 
+                    FormField(
+                        value = email,
+                        onValueChange = { email = it },
+                        label = stringResource(R.string.email),
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                    Spacer(Modifier.height(dimensionResource(R.dimen.spacing_medium)))
+
                 }
             }
         }
