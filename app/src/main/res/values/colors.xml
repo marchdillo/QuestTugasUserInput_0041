@@ -13,4 +13,7 @@
     <color name="button_enabled">#FF6A35B8</color>
     <color name="checkbox_checked">#FF6A35B8</color>
     <color name="checkbox_unchecked">#FF444444</color>
+
+    <!-- Layar hasil setelah klik Proceed -->
+    <color name="result_card_background">#FFF2ECFA</color>
 </resources>

@@ -21,6 +21,15 @@
     <string name="cd_dropdown">Buka pilihan</string>
     <string name="toast_proceed">Biodata berhasil dikirim</string>
 
+    <!-- Layar hasil setelah klik Proceed -->
+    <string name="result_title">Biodata Berhasil Disimpan!</string>
+    <string name="result_full_name">Nama Lengkap : %1$s %2$s</string>
+    <string name="result_email">Email : %1$s</string>
+    <string name="result_birth_date">Tanggal Lahir : %1$s</string>
+    <string name="result_experience">Pengalaman : %1$s</string>
+    <string name="result_skill">Skill : %1$s</string>
+    <string name="result_reset">Isi Ulang Biodata</string>
+
     <string-array name="experience_options">
         <item>&lt; 1 tahun</item>
         <item>1 - 3 tahun</item>
