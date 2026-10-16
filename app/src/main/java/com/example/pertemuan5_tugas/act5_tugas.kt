@@ -239,3 +239,21 @@ private fun fieldColors() = OutlinedTextFieldDefaults.colors(
     disabledTrailingIconColor = colorResource(R.color.field_text)
 )
 
+@Composable
+fun FormField(
+    value: String,
+    onValueChange: (String) -> Unit,
+    label: String,
+    modifier: Modifier = Modifier
+) {
+    OutlinedTextField(
+        value = value,
+        onValueChange = onValueChange,
+        label = { Text(label, fontSize = dimensionResource(R.dimen.text_field).value.sp) },
+        singleLine = true,
+        shape = RoundedCornerShape(dimensionResource(R.dimen.field_corner)),
+        colors = fieldColors(),
+        modifier = modifier
+    )
+}
+
