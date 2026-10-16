@@ -80,7 +80,15 @@ fun Act5Tugas() {
     Scaffold(
         containerColor = colorResource(R.color.screen_background)
     ) { innerPadding ->
-
+        // Layer bawah: gambar header di dalam Scaffold
+        Image(
+            painter = painterResource(R.drawable.gothic_church),
+            contentDescription = stringResource(R.string.cd_header_image),
+            contentScale = ContentScale.Crop,
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(dimensionResource(R.dimen.header_height))
+        )
 
 
     }
