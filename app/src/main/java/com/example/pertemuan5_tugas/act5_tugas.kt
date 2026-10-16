@@ -357,3 +357,25 @@ fun ExperienceDropdown(
     }
 }
 
+@Composable
+fun SkillCheckbox(
+    label: String,
+    checked: Boolean,
+    onCheckedChange: (Boolean) -> Unit
+) {
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Checkbox(
+            checked = checked,
+            onCheckedChange = onCheckedChange,
+            colors = CheckboxDefaults.colors(
+                checkedColor = colorResource(R.color.checkbox_checked),
+                uncheckedColor = colorResource(R.color.checkbox_unchecked)
+            )
+        )
+        Text(
+            text = label,
+            color = colorResource(R.color.text_label),
+            fontSize = dimensionResource(R.dimen.text_field).value.sp
+        )
+    }
+}
