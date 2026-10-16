@@ -66,7 +66,12 @@ fun Act5Tugas() {
     val context = LocalContext.current
     val toastMessage = stringResource(R.string.toast_proceed)
 
-
+    var firstName by remember { mutableStateOf("") }
+    var lastName by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("") }
+    var birthDate by remember { mutableStateOf("") }
+    var experience by remember { mutableStateOf("") }
+    val skills = remember { mutableStateListOf<String>() }
 
 }
 
