@@ -90,7 +90,21 @@ fun Act5Tugas() {
                 .height(dimensionResource(R.dimen.header_height))
         )
 
-
+        // Layer atas: Box mengapung di atas Scaffold
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(top = dimensionResource(R.dimen.form_top_offset))
+                .shadow(
+                    elevation = dimensionResource(R.dimen.form_elevation),
+                    shape = RoundedCornerShape(
+                        topStart = dimensionResource(R.dimen.form_corner),
+                        topEnd = dimensionResource(R.dimen.form_corner)
+                    )
+                )
+                .padding(innerPadding),
+            contentAlignment = Alignment.TopCenter
+        )
     }
 }
 
