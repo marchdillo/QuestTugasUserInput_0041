@@ -134,6 +134,21 @@ fun Act5Tugas() {
                     )
                     Spacer(Modifier.height(dimensionResource(R.dimen.spacing_large)))
 
+                    Row(horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.spacing_small))) {
+                        FormField(
+                            value = firstName,
+                            onValueChange = { firstName = it },
+                            label = stringResource(R.string.first_name),
+                            modifier = Modifier.weight(dimensionResource(R.dimen.weight_equal).value)
+                        )
+                        FormField(
+                            value = lastName,
+                            onValueChange = { lastName = it },
+                            label = stringResource(R.string.last_name),
+                            modifier = Modifier.weight(dimensionResource(R.dimen.weight_equal).value)
+                        )
+                    }
+                    Spacer(Modifier.height(dimensionResource(R.dimen.spacing_medium)))
 
                 }
             }
